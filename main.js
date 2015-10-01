@@ -18,7 +18,7 @@ var prices = items.map (function (item) {
 
 var sum = prices.reduce( function (previous, next) {
 
-  return prev + next;
+  return previous + next;
 
 });
 console.log(sum);
