@@ -2,7 +2,8 @@
 (function () {
 
 
-//question 1 Show me how to calculate the average price of all items.
+////////////////////////////////////Question 1 
+
 console.log(items.length);
 
 // items.forEach(function (item) {
@@ -12,7 +13,7 @@ console.log(items.length);
 var prices = items.map (function (item) {
   return item.price;
 
-// });
+});
 
 //adding items together
 
@@ -32,7 +33,7 @@ console.log(converted);
 
 //convert to string
 
-var str = ' the average price is $' + converted;
+var str = ' The average price is $' + converted+".";
   console.log(str);
 
   //make it show up on the page
@@ -45,9 +46,14 @@ var str = ' the average price is $' + converted;
 
   answer1.appendChild(textNode);
 
-  
 
-////////////////////////////////////////
+
+///////////////////////////////////////////////////////Question 2
+
+//how this works: we use a forEach() method to iterate
+//through the list and push the results of the condition(>14,<18) to an array.
+// Decided against using map() because we ran into problems getting the results
+// to display properly in index.html. 
 
  var itemTitle=[];
 
@@ -60,14 +66,18 @@ var str = ' the average price is $' + converted;
   });
 console.log(itemTitle);
 
+//.createTextNode requires a string as its argument, but 
+//the question asks for an array displayed on 3 separate lines.
+//found the DOM method document.write() and it allowed us to 
+// join the array indicies and insert a break between each line,
+// satisfying the answer. . . if that makes any sense to you. {o_o}
+
 var answer2= document.querySelector('#answer2');
 
 var textNode= document.write(itemTitle.join(" <br> "));
 
-})
+/////////////////////////////////////////////////////////////////
 
 
 }());
 
-
-///////////////////////////////////
