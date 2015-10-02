@@ -53,28 +53,28 @@ var str = ' The average price is $' + converted+".";
 //how this works: we use a forEach() method to iterate
 //through the list and push the results of the condition(>14,<18) to an array.
 // Decided against using map() because we ran into problems getting the results
-// to display properly in index.html. 
+// to display properly in index.html. {o_o}
 
- var itemTitle=[];
-
+ var itemTitles=[];
+ 
   var merchList=items.forEach(function(item){
 
       if(item.price > 14 && item.price < 18){
 
-        itemTitle.push(item.title);
+        itemTitles.push(item.title);
       }
   });
-console.log(itemTitle);
 
-//.createTextNode requires a string as its argument, but 
-//the question asks for an array displayed on 3 separate lines.
-//found the DOM method document.write() and it allowed us to 
-// join the array indicies and insert a break between each line,
-// satisfying the answer. . . if that makes any sense to you. {o_o}
 
-var answer2= document.querySelector('#answer2');
+console.log(itemTitles);
 
-var textNode= document.write(itemTitle.join(" <br> "));
+
+
+
+// used innerHTML to display on 3 separate lines {o_o}
+
+document.getElementById( 'answer2' ).innerHTML = itemTitles[0] + "<br />" + itemTitles[1]+ "<br/>" + itemTitles[2];
+
 
 ///////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////Question 3
@@ -89,11 +89,12 @@ var currency = items.forEach(function(item){
 
 var euro = items.map(function(item){
   if (item.currency_code !== "USD"){
-    return item.title +" "+"costs"+" "+"£"+item.price+".";
+    return item.title +" "+"costs"+" "+ "\xA3"+item.price+".";
   } else{
     return false;
   }
 })
+
 console.log(euro);
 
 ccArray = euro.filter(function(item){
@@ -113,6 +114,17 @@ var textNode = document.createTextNode(str);
 answer3.appendChild(textNode);
 
 
-/////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////Question 4
+
+
+///////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////Question 5
+
+
+///////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////Question 6
+
+
 }());
 
