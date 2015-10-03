@@ -3,12 +3,9 @@ h1 {
   font-family: 'Vast Shadow', serif; }
 
 h2 {
+  background: url("etsy/banner.jpg");
   height: 200px;
-  }
-
-img{
-  max-width: 100%;
-}
+  background-size: 50%; }
 
 div {
   text-align: center;
@@ -18,7 +15,3 @@ div {
 p {
   font-family: 'Josefin Slab', serif;
   font-size: 1.3em; }
-
-.line{
-  border-top: 1px solid black;
-}
