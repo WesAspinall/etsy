@@ -6,9 +6,9 @@
 
 console.log(items.length);
 
-// items.forEach(function (item) {
-//   console.log(item.price;)
-// });
+items.forEach(function (item) {
+  console.log(item.price);
+});
 
 var prices = items.map (function (item) {
   return item.price;
@@ -50,10 +50,10 @@ var str = ' The average price is $' + converted+".";
 /////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////Question 2
 
-//how this works: we use a forEach() method to iterate
-//through the list and push the results of the condition(>14,<18) to an array.
+// {o_o} how this works: we use a forEach() method to iterate
+// through the list and push the results of the condition(>14,<18) to an array.
 // Decided against using map() because we ran into problems getting the results
-// to display properly in index.html. {o_o}
+// to display properly in index.html
 
  var itemTitles=[];
  
@@ -76,8 +76,8 @@ console.log(itemTitles);
 document.getElementById( 'answer2' ).innerHTML = itemTitles[0] + "<br />" + itemTitles[1]+ "<br/>" + itemTitles[2];
 
 
-///////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////Question 3
+// ///////////////////////////////////////////////////////////////
+// ////////////////////////////////////////////////////Question 3
 
 var price = items.forEach(function(item){
   console.log(item.price);
@@ -117,13 +117,83 @@ answer3.appendChild(textNode);
 ///////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////Question 4
 
+var containsWood = items.filter(function(item){
+
+  if ( item.materials.indexOf("wood") !== -1){
+
+    return true;
+  }
+
+});
+
+console.log(containsWood);
+
+var wood = containsWood.map(function(item){
+  return item.title+" "+"is made of wood.";
+});
+
+console.log(wood);
+
+document.getElementById( 'answer4' ).innerHTML = 
+wood[0] + "<br />" + wood[1]+ "<br/>" + wood[2]+ "</br>"+ wood[3]+ "<br/>" + wood[4];
+
+
 
 ///////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////Question 5
+var foo=items.map(function(item){ 
+ if(item.materials.length >= 8){
+  return item.title+" "+"has"+" "+item.materials.length+" "+"materials:"
+  }
+});
+
+var bar=items.map(function(item){ 
+ if(item.materials.length >= 8){
+  return item.materials;
+  }
+});
+
+// console.log(foo);
+
+var fooFilt=foo.filter(function(item){
+ if ( item !== "undefined"){
+    return item;
+  }
+})
+
+var barFilt=bar.filter(function(item){
+ if ( item !== "undefined"){
+    return item;
+  }
+})
 
 
+console.log(fooFilt);
+console.log(barFilt);
+
+document.getElementById( 'answer5' ).innerHTML = 
+fooFilt[0]+ "<br/>"+"<br/>" + barFilt[0].join("<br />") 
+
++ "<br/>" +"<br/>"+
+
+fooFilt[1]+ "<br/>"+"<br/>" + barFilt[1].join("<br />");
 ///////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////Question 6
+
+var iDidFilter = items.filter(function(item){
+   return item.who_made === "i_did";
+});
+
+ console.log(iDidFilter.length);
+
+ var str = iDidFilter.length +" "+ "were made by their sellers."
+
+ console.log(str);
+
+var answer6 = document.querySelector('#answer6');
+var textNode = document.createTextNode(str);
+
+answer6.appendChild(textNode);
 
 
 }());
