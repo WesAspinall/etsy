@@ -33,7 +33,7 @@ p {
 
 .line {
   position: absolute;
-  border-bottom: 1px solid #CFD6DB;
+  border-bottom: 1px solid #CBB154;
   z-index: 1;
   width: 100%;
   height: 12px; }
