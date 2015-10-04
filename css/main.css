@@ -8,17 +8,19 @@ body, .h1wrapper {
 
 h1 {
   font-size: 2.5em;
-  font-family: 'Vast Shadow', serif;
+  font-family: 'Permanent Marker', serif;
   text-align: left;
   padding-top: 20px;
-  margin-top: 0; }
+  margin-top: 0;
+  text-shadow: 1px 2px 5px #CBB154; }
 
 h2 {
   margin-top: 0;
-  height: 200px; }
-
-img {
-  max-width: 100%;
+  height: 200px;
+  overflow: hidden;
+  height: 200px;
+  background-image: url(http://www.brandsoftheworld.com/sites/default/files/image_3.jpg);
+  background-size: 20%;
   border: 1px solid black; }
 
 div {
@@ -27,9 +29,10 @@ div {
   font-family: 'Vast Shadow', serif; }
 
 p {
-  font-family: 'Josefin Slab', serif;
+  font-family: 'Permanent Marker', serif;
   font-size: 1.3em;
-  padding-top: 30px; }
+  padding-top: 30px;
+  line-height: 50px; }
 
 .line {
   position: absolute;
@@ -42,20 +45,25 @@ p {
   position: absolute;
   z-index: 2;
   left: 40%;
-  right: 40%; }
+  right: 40%;
+  background-image: url(https://waspnx.files.wordpress.com/2015/10/2013-01-18-21-13-122.jpg);
+  background-size: 60%;
+  border: 1px solid #CBB154;
+  border-radius: 20px; }
 
 footer {
   height: 100px;
-  color: white;
   width: 100%;
-  background-color: black;
+  background-image: url(http://www.brandsoftheworld.com/sites/default/files/image_3.jpg);
+  background-size: 20%;
   text-align: center;
   padding-top: 50px; }
 
 span {
-  font-family: 'Vast Shadow', serif;
+  font-family: 'Permanent Marker', serif;
   font-size: 2.5em;
-  color: #CBB154; }
+  color: black;
+  text-shadow: 1px 2px 2px white; }
 
 .answerContainer:hover {
   border-right: 3px solid #CBB154; }
