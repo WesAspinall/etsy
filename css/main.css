@@ -43,3 +43,6 @@ p {
   z-index: 2;
   left: 40%;
   right: 40%; }
+
+.answerContainer:hover {
+  border-right: 3px solid #CBB154; }
